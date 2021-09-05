@@ -1,0 +1,3 @@
+<app-book-list [books]="books$ | async" (addChange)="onAdd($event)"></app-book-list>
+<app-book-collection [booksCollection]="booksCollection$ | async" (removeChange)="onRemove($event)">
+</app-book-collection>

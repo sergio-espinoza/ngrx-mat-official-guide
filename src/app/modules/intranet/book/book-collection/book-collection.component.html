@@ -1,0 +1,12 @@
+<mat-card>Book Collection</mat-card>
+
+<mat-card *ngFor="let book of booksCollection">
+<mat-card-content>
+  <p>{{ book?.volumeInfo?.title }}</p> by
+  <span>{{ book?.volumeInfo?.authors }}</span>
+  <img [src]="book?.volumeInfo?.imageLinks?.smallThumbnail" alt="Cover Page" />
+</mat-card-content>
+<mat-card-actions>
+  <button mat-button (click)="removeChange.emit(book?.id)" data-test="add-button">Remove from Collection</button>
+</mat-card-actions>
+</mat-card>
